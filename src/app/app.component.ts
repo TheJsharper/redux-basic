@@ -6,18 +6,4 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  counter: number;
-
-  constructor() {
-    this.counter = 10;
-  }
-
-  increment(): void {
-    this.counter++;
-  }
-
-  decrement(): void {
-    this.counter--;
-  }
-
 }
