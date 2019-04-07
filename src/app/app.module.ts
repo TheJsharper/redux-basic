@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import { CounterContainerComponent } from './counter/counter-container/counter-container.component';
 import { CounterComponentComponent } from './counter/counter-component/counter-component.component';
 import {ReactiveCounterModule} from "./reactive/reactive-counter.module";
+import {NgrxCounterModule} from "./ngrx/ngrx-counter.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {ReactiveCounterModule} from "./reactive/reactive-counter.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveCounterModule
+    ReactiveCounterModule,
+    NgrxCounterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
