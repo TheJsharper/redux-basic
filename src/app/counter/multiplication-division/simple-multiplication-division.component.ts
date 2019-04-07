@@ -2,8 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-counter-component',
-  templateUrl: './simple-multiplication-division.component.html',
-  styleUrls: ['./counter-component.component.scss']
+  templateUrl: './simple-multiplication-division.component.html'
 })
 export class SimpleMultiplicationDivisionComponent implements OnInit {
 

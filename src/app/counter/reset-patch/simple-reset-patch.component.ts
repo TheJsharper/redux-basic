@@ -2,10 +2,9 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-counter-container',
-  templateUrl: './simple-reset-patch.component.html',
-  styleUrls: ['./counter-container.component.scss']
+  templateUrl: './simple-reset-patch.component.html'
 })
-export class CounterContainerComponent implements OnInit {
+export class SimpleResetPatchComponent implements OnInit {
   @Input() counter: number;
   @Output() changedCounter: EventEmitter<number> = new EventEmitter<number>();
 
