@@ -1,4 +1,7 @@
 import {Component} from "@angular/core";
+import {AppState} from "../addition-subtraction/addition-subtraction.component";
+import {Store} from "@ngrx/store";
+import {PatchAction, ResetAction} from "../counter.actions";
 
 @Component({
   selector: 'ngrx-reset-patch',
@@ -7,15 +10,15 @@ import {Component} from "@angular/core";
 export class ResetPatchComponent {
   state: number;
 
-  constructor() {
-    this.state = 0;
+  constructor(private store: Store<AppState>) {
+    this.store.select('counter').subscribe((newState: number) => this.state = newState)
   }
 
   reset(): void {
-    this.state = 0;
+    this.store.dispatch(new ResetAction());
   }
 
   patch(next: number): void {
-    this.state = next;
+    this.store.dispatch(new PatchAction(next))
   }
 }

@@ -4,9 +4,17 @@ import {MultiplicationDivisionComponent} from "./multiplication-division/multipl
 import {ResetPatchComponent} from "./reset-patch/reset-patch.component";
 import {NgrxMainComponent} from "./main/ngrx-main.component";
 import {CommonModule} from "@angular/common";
+import {StoreModule} from "@ngrx/store";
+import {counterReducer} from "./counter.reducer";
+import {StoreDevtoolsModule, StoreDevtoolsOptions} from "@ngrx/store-devtools";
+import {environment} from "../../environments/environment";
 
 @NgModule({
   declarations: [AdditionSubtractionComponent, MultiplicationDivisionComponent, ResetPatchComponent, NgrxMainComponent],
+  imports: [StoreModule.forRoot({counter: counterReducer}), StoreDevtoolsModule.instrument(<StoreDevtoolsOptions>{
+    maxAge: 25,
+    logOnly: environment.production
+  })],
   exports: [NgrxMainComponent, CommonModule]
 })
 export class NgrxCounterModule {

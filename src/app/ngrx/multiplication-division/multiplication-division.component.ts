@@ -1,4 +1,7 @@
 import {Component} from "@angular/core";
+import {AppState} from "../addition-subtraction/addition-subtraction.component";
+import {Store} from "@ngrx/store";
+import {DivisionAction, MultiplicationAction} from "../counter.actions";
 
 @Component({
   selector: 'ngrx-multiplication-division',
@@ -7,15 +10,15 @@ import {Component} from "@angular/core";
 export class MultiplicationDivisionComponent {
   state: number;
 
-  constructor() {
-    this.state = 0;
+  constructor(private  store: Store<AppState>) {
+    this.store.select('counter').subscribe((value: number) => this.state = value);
   }
 
   multiply(): void {
-    this.state *= 2;
+    this.store.dispatch(new MultiplicationAction());
   }
 
   divide(): void {
-    this.state /= 2;
+    this.store.dispatch(new DivisionAction());
   }
 }
