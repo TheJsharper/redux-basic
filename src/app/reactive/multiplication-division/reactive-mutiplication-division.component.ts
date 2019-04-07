@@ -4,8 +4,7 @@ import {BehaviorSubject} from "rxjs";
 
 @Component({
   selector: 'app-reactive-counter-container',
-  templateUrl: './reactive-counter.container.html',
-  styleUrls: ['./reactive-counter.container.scss']
+  templateUrl: './reactive-mutiplication-division.component.html'
 })
 export class ReactiveCounterContainer {
   @Input()counter$: BehaviorSubject<number>;

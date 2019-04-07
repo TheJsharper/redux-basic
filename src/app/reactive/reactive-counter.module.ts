@@ -1,13 +1,14 @@
 import {NgModule} from "@angular/core";
-import {ReactiveCounterComponent} from "./reactive-component/reactive-counter.component";
+import {ReactiveCounterComponent} from "./addition-subtraction/reactive-addition-subtraction.component";
 import {CommonModule} from "@angular/common";
-import {ReactiveCounterContainer} from "./reactive-container/reactive-counter.container";
-import {ReactiveCounterComponentResetPatch} from "./reactive-component-reset-patch/reactive-counter.component-reset-patch";
+import {ReactiveCounterContainer} from "./multiplication-division/reactive-mutiplication-division.component";
+import {ReactiveCounterComponentResetPatch} from "./reset-patch/reactive-reset-patch.component";
+import {ReactiveMainComponent} from "./main/reactive-main.component";
 
 @NgModule({
-  declarations: [ReactiveCounterComponent, ReactiveCounterContainer, ReactiveCounterComponentResetPatch],
-  imports:[CommonModule],
-  exports: [ReactiveCounterComponent],
+  declarations: [ReactiveCounterComponent, ReactiveCounterContainer, ReactiveCounterComponentResetPatch, ReactiveMainComponent],
+  imports: [CommonModule],
+  exports: [ReactiveMainComponent],
 
 })
 export class ReactiveCounterModule {

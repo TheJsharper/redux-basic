@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-counter-container',
-  templateUrl: './counter-container.component.html',
+  templateUrl: './simple-reset-patch.component.html',
   styleUrls: ['./counter-container.component.scss']
 })
 export class CounterContainerComponent implements OnInit {

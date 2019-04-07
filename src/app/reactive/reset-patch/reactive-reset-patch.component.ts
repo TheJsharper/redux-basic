@@ -4,8 +4,7 @@ import {BehaviorSubject} from "rxjs";
 
 @Component({
   selector: 'app-reactive-counter-reset-patch',
-  templateUrl: './reactive-counter.component-reset-patch.html',
-  styleUrls: ['./reactive-counter.component-reset-patch.scss']
+  templateUrl: './reactive-reset-patch.component.html',
 })
 export class ReactiveCounterComponentResetPatch {
   @Input()counter$: BehaviorSubject<number>;

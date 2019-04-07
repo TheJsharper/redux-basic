@@ -3,8 +3,8 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import { CounterContainerComponent } from './counter/counter-container/counter-container.component';
-import { CounterComponentComponent } from './counter/counter-component/counter-component.component';
+import { CounterContainerComponent } from './counter/reset-patch/simple-reset-patch.component';
+import { SimpleMultiplicationDivisionComponent } from './counter/multiplication-division/simple-multiplication-division.component';
 import {ReactiveCounterModule} from "./reactive/reactive-counter.module";
 import {NgrxCounterModule} from "./ngrx/ngrx-counter.module";
 
@@ -12,7 +12,7 @@ import {NgrxCounterModule} from "./ngrx/ngrx-counter.module";
   declarations: [
     AppComponent,
     CounterContainerComponent,
-    CounterComponentComponent,
+    SimpleMultiplicationDivisionComponent,
   ],
   imports: [
     BrowserModule,

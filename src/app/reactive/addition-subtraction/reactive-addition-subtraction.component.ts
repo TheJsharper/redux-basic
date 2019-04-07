@@ -3,8 +3,7 @@ import {BehaviorSubject} from "rxjs/index";
 
 @Component({
   selector: 'app-reactive-counter-component',
-  templateUrl: './reactive-counter.component.html',
-  styleUrls: ['./reactive-counter.component.scss']
+  templateUrl: './reactive-addition-subtraction.component..html'
 })
 export class ReactiveCounterComponent {
   counter$: BehaviorSubject<number>;
