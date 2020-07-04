@@ -1,6 +1,6 @@
 button{
   margin-right: 10px;
 }
-:host /deep/ .card {
+:host-context(.card) {
   margin-top: 20px;
 }
