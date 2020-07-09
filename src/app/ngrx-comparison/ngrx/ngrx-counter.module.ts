@@ -7,7 +7,7 @@ import {CommonModule} from "@angular/common";
 import {StoreModule} from "@ngrx/store";
 import {counterReducer} from "./counter.reducer";
 import {StoreDevtoolsModule, StoreDevtoolsOptions} from "@ngrx/store-devtools";
-import {environment} from "../../environments/environment";
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AdditionSubtractionComponent, MultiplicationDivisionComponent, ResetPatchComponent, NgrxMainComponent],
