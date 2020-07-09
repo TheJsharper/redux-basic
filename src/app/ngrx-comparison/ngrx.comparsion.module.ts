@@ -13,7 +13,6 @@ import { NgrxCounterModule } from './ngrx/ngrx-counter.module';
         SimpleCounterModule,
         ReactiveCounterModule,
         NgrxCounterModule
-    
     ],
 
 })

@@ -1,0 +1,1 @@
+export * from './reactive-mutiplication-division.component';
