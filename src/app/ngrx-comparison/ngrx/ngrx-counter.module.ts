@@ -11,7 +11,10 @@ import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AdditionSubtractionComponent, MultiplicationDivisionComponent, ResetPatchComponent, NgrxMainComponent],
-  imports: [StoreModule.forRoot({counter: counterReducer}), StoreDevtoolsModule.instrument(<StoreDevtoolsOptions>{
+  imports: [
+    CommonModule,
+    StoreModule.forFeature("counter",{counter: counterReducer}), 
+    StoreDevtoolsModule.instrument(<StoreDevtoolsOptions>{
     maxAge: 25,
     logOnly: environment.production
   })],

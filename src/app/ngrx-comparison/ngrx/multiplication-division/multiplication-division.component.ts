@@ -1,17 +1,19 @@
-import {Component} from "@angular/core";
-import {AppState} from "../addition-subtraction/addition-subtraction.component";
-import {Store} from "@ngrx/store";
-import {DivisionAction, MultiplicationAction} from "../counter.actions";
+import { Component } from "@angular/core";
+import { select, Store } from "@ngrx/store";
+import { Observable } from 'rxjs';
+import { AppState } from './../../../store/reducers';
+import { DivisionAction, MultiplicationAction } from "../counter.actions";
+import { selectCounterCurrentValue } from './../counter.selectors';
 
 @Component({
   selector: 'ngrx-multiplication-division',
   templateUrl: './multiplication-division.component.html'
 })
 export class MultiplicationDivisionComponent {
-  state: number;
+  currentValues: Observable<number>;
 
-  constructor(private  store: Store<AppState>) {
-    this.store.select('counter').subscribe((value: number) => this.state = value);
+  constructor(private store: Store<AppState>) {
+    this.currentValues = this.store.pipe(select(selectCounterCurrentValue))
   }
 
   multiply(): void {

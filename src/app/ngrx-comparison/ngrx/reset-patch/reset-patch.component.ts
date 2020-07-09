@@ -1,17 +1,19 @@
-import {Component} from "@angular/core";
-import {AppState} from "../addition-subtraction/addition-subtraction.component";
-import {Store} from "@ngrx/store";
-import {PatchAction, ResetAction} from "../counter.actions";
+import { Component } from "@angular/core";
+import { select, Store } from "@ngrx/store";
+import { Observable } from 'rxjs';
+import { AppState } from './../../../store/reducers';
+import { PatchAction, ResetAction } from "../counter.actions";
+import { selectCounterCurrentValue } from './../counter.selectors';
 
 @Component({
   selector: 'ngrx-reset-patch',
   templateUrl: './reset-patch.component.html'
 })
 export class ResetPatchComponent {
-  state: number;
+  currentValues: Observable<number>;
 
   constructor(private store: Store<AppState>) {
-    this.store.select('counter').subscribe((newState: number) => this.state = newState)
+    this.currentValues = this.store.pipe(select(selectCounterCurrentValue));
   }
 
   reset(): void {
