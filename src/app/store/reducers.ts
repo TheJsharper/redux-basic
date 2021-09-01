@@ -6,12 +6,12 @@ import { environment } from '../../environments/environment';
   
   
   export interface AppState {
-    //counter:CounterState
+   // counter:CounterState
   }
   
   export const reducers: ActionReducerMap<AppState> = {
-    router: routerReducer,
-  // counter:counterReducer
+    //router: routerReducer,
+   //counter:metaReducers
 
   };
   
